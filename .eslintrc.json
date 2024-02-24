@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["^firebase/.+"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js", "**/*.test.jsx"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
